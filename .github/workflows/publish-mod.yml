@@ -32,9 +32,12 @@ jobs:
           cd src  # Change to the src directory
           zip -r "../${{ env.modpack_name }}-${{ env.version }}.zip" *
 
-      # Debug step: List the contents of the zip file
+      # Debug: List the contents of the zip file, debug env variables
       - name: List Zip Contents
         run: |
+          echo "modpack_name: ${{ env.modpack_name }}"
+          echo "version: ${{ env.version }}"
+          echo "description: ${{ env.description }}"
           unzip -l "${{ env.modpack_name }}-${{ env.version }}.zip"
 
       # Upload to Thunderstore
@@ -44,10 +47,10 @@ jobs:
         with:
           file: "${{ env.modpack_name }}-${{ env.version }}.zip"
           namespace: Jumpperi                       # Your Team in Thunderstore
-          description: ""                           # leave empty if supplying a file
-          token: ${{ secrets.THUNDERSTORE_TOKEN }}
-          name: ""                                  # leave empty if supplying a file
-          version: ""                               # leave empty if supplying a file
+          description: ${{ env.description }}       # The description of the package
+          token: ${{ secrets.THUNDERSTORE_TOKEN }}  # Your Thunderstore API token
+          name: ${{ env.modpack_name }}             # the name of the package
+          version: ${{ env.version }}               # The version of the package
           community: valheim                        # community in Thunderstore to publish to
           repo: valheim.thunderstore.io             # the URL or repository to publish to
           categories: |                             # the categories of the package. Use slug names, get them from thunderstore API, example: curl -X GET "https://thunderstore.io/api/experimental/community/valheim/category/" -H  "accept: application/json" | jq
