@@ -29,7 +29,8 @@ jobs:
       # Zip the required files
       - name: Zip files
         run: |
-          zip -r "${{ env.modpack_name }}-${{ env.version }}.zip" src/*
+          cd src  # Change to the src directory
+          zip -r "../${{ env.modpack_name }}-${{ env.version }}.zip" *
 
       # Debug step: List the contents of the zip file
       - name: List Zip Contents
