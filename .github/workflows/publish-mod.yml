@@ -37,17 +37,18 @@ jobs:
         run: |
           unzip -l "${{ env.modpack_name }}-${{ env.version }}.zip"
 
-      # # Conditional upload step
-      # - name: Upload to Thunderstore (if enabled)
-      #   if: ${{ secrets.THUNDERSTORE_ENABLED == 'true' }}
-      #   uses: GreenTF/upload-thunderstore-package@v4.3
-      #   with:
-      #     namespace: "" # leave empty if supplyin a file
-      #     description: ${{ env.description }} # the description of the package 
-      #     token: ${{ secrets.THUNDERSTORE_TOKEN }}
-      #     name: "" # leave empty if supplyin a file
-      #     version: "" # leave empty if supplyin a file
-      #     community: valheim # your specific community
-      #     repo: valheim.thunderstore.io # the URL or repository to publish to
-      #     categories: | # the categories of the package. Use slug names, get them from thunderstore API, example: curl -X GET "https://thunderstore.io/api/experimental/community/valheim/category/" -H  "accept: application/json" | jq
-      #       modpacks
+      # Upload to Thunderstore
+      - name: Upload to Thunderstore (if enabled)
+        # if: ${{ secrets.THUNDERSTORE_ENABLED == 'true' }}
+        uses: GreenTF/upload-thunderstore-package@v4.3
+        with:
+          file: "${{ env.modpack_name }}-${{ env.version }}.zip"
+          namespace: Jumpperi                       # Your Team in Thunderstore
+          description: ""                           # leave empty if supplying a file
+          token: ${{ secrets.THUNDERSTORE_TOKEN }}
+          name: ""                                  # leave empty if supplying a file
+          version: ""                               # leave empty if supplying a file
+          community: valheim                        # community in Thunderstore to publish to
+          repo: valheim.thunderstore.io             # the URL or repository to publish to
+          categories: |                             # the categories of the package. Use slug names, get them from thunderstore API, example: curl -X GET "https://thunderstore.io/api/experimental/community/valheim/category/" -H  "accept: application/json" | jq
+            modpacks
