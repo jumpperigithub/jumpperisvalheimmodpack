@@ -1,0 +1,52 @@
+name: Publish Mod
+
+# Set the workflow manual for now
+on:
+  workflow_dispatch: 
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the repository
+      - uses: actions/checkout@v3
+
+      # Install jq (if not already available)
+      - name: Install jq
+        run: sudo apt-get install -y jq
+
+      # Read the manifest.json to get data from the manifest
+      - name: Read manifest.json
+        id: manifest
+        run: |
+          MODPACK_NAME=$(jq -r '.name' src/manifest.json)
+          VERSION=$(jq -r '.version' src/manifest.json)
+          DESCRIPTION=$(jq -r '.description' src/manifest.json)
+          echo "modpack_name=$MODPACK_NAME" >> $GITHUB_ENV
+          echo "version=$VERSION" >> $GITHUB_ENV
+          echo "description=$DESCRIPTION" >> $GITHUB_ENV
+
+      # Zip the required files
+      - name: Zip files
+        run: |
+          zip -r "${{ env.modpack_name }}-${{ env.version }}.zip" src/*
+
+      # Debug step: List the contents of the zip file
+      - name: List Zip Contents
+        run: |
+          unzip -l "${{ env.modpack_name }}-${{ env.version }}.zip"
+
+      # Conditional upload step
+      - name: Upload to Thunderstore (if enabled)
+        if: ${{ secrets.THUNDERSTORE_ENABLED == 'true' }}
+        uses: GreenTF/upload-thunderstore-package@v4.3
+        with:
+          namespace: "" # leave empty if supplyin a file
+          description: ${{ env.description }} # the description of the package 
+          token: ${{ secrets.THUNDERSTORE_TOKEN }}
+          name: "" # leave empty if supplyin a file
+          version: "" # leave empty if supplyin a file
+          community: valheim # your specific community
+          repo: valheim.thunderstore.io # the URL or repository to publish to
+          categories: | # the categories of the package. Use slug names, get them from thunderstore API, example: curl -X GET "https://thunderstore.io/api/experimental/community/valheim/category/" -H  "accept: application/json" | jq
+            modpacks
