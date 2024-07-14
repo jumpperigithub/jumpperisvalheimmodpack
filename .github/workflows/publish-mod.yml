@@ -20,7 +20,7 @@ jobs:
         id: manifest
         run: |
           MODPACK_NAME=$(jq -r '.name' src/manifest.json)
-          VERSION=$(jq -r '.version' src/manifest.json)
+          VERSION=$(jq -r '.version_number' src/manifest.json)
           DESCRIPTION=$(jq -r '.description' src/manifest.json)
           echo "modpack_name=$MODPACK_NAME" >> $GITHUB_ENV
           echo "version=$VERSION" >> $GITHUB_ENV
