@@ -2,7 +2,7 @@
   "name": "Jumpperi_Curated_Modpack",
   "version_number": "1.0.3",
   "website_url": "",
-  "description": "Jumpperi's Curated Mods with config changes and balance tweaks. Modpack is based on immersion and exploration while making the base game grind easier, such as woodcutting and mining.",
+  "description": "NOTE: If updating, see changelog! Jumpperi's Curated Mods with config changes and balance tweaks. Modpack is based on immersion and exploration while making the base game grind easier, such as woodcutting and mining.",
   "dependencies": [
       "denikson-BepInExPack_Valheim-5.4.2202",
       "Azumatt-Official_BepInEx_ConfigurationManager-18.3.0",
@@ -84,6 +84,8 @@
       "Azumatt-AzuContainerSizes-1.0.3",
       "Azumatt-AAA_Crafting-1.4.5",
       "Azumatt-MagicEitrBase-1.1.5",
-      "sbtoonz-Food_Degrade_Only_On_Move-1.0.1"
+      "Narolith-AutoFeed-0.2.3",
+      "Azumatt-AzuMiscPatches-1.2.2",
+      "0zz-SeedTotem-0.1.3"
   ]
 }
