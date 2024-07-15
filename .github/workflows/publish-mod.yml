@@ -2,7 +2,10 @@ name: Publish Mod
 
 # Set the workflow manual for now
 on:
-  workflow_dispatch: 
+  push:
+    tags:
+      - '*'
+  workflow_dispatch:
 
 jobs:
   publish:
