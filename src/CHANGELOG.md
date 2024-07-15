@@ -1,7 +1,7 @@
 ## Changelog
 
 ### 1.0.3
-* NOTE: Remove `Multicraft` mod. AzuAnti-ArthriticCrafting is not compatible and is better.
+* **NOTE: <span style="color:red"> Remove</span> `Multicraft` mod**. AzuAnti-ArthriticCrafting is not compatible and has more functionality.
 * Add patches for Epicloot and Therzie's mods
 * Add MagicEitrBase
 * Add another backpack mod, which works better with other mods
@@ -14,7 +14,7 @@
 * Improve ranching
 
 ### 1.0.1
-* NOTE: Remove `Wagon` mod due to compatibility issues with other mods.
+* **NOTE: <span style="color:red"> Remove</span> `Wagon` mod** due to compatibility issues with other mods.
 
 ### 1.0.0
 * Initial version.
