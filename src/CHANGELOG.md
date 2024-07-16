@@ -1,5 +1,20 @@
 ## Changelog
 
+> ## NOTE: if you are updating from a previous version, please make sure to delete mods that are listed here as `Remove`.
+> ### If still unsure what to do, you can just make a new profile and reinstall the modpack to update to the latest version.
+
+### 1.1.0
+* **NOTE: <span style="color:red"> Remove</span> `QuickConnect` mod**.
+* Added `FastLink` mod to replace `QuickConnect`. Added an example server to the list, but you can edit it from the `F1` menu.
+* Smoother health regen with `SteadyRegeneration`.
+* Remove changelog from menu
+* Added `StartupAccelerator` to speed up the game startup
+* Added `DynamicStoragePiles` to make storage piles containers.
+* Added `StackedBars` with compatibility to `DynamicStoragePiles`
+* Performance and QoL: `TimedTorchesStayLit?`: torches turn off during the day; `Drop_That`: item drops clump together
+* Small additions and tweaks
+* Few new monsters and places to explore!
+
 ### 1.0.4
 * **NOTE: <span style="color:red"> Remove</span> `Food_Degrade_Only_On_Move` mod**
 * Added **AzuMiscPatches** to handle food degradation instead of `Food_Degrade_Only_On_Move`
