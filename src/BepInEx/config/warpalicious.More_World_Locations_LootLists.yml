@@ -1,0 +1,252 @@
+Tier 1 Items:
+- DustMagic
+- RunestoneMagic
+- ShardMagic
+- EssenceMagic
+Tier 2 Items:
+- DustRare
+- RunestoneRare
+- EssenceRare
+- ShardRare
+Tier 3 Items:
+- RunestoneEpic
+- EssenceEpic
+- ShardEpic
+- DustEpic
+Tier 4 Items:
+- ShardLegendary
+- RunestoneLegendary
+- EssenceLegendary
+- DustLegendary
+Tier 5 Items:
+- EssenceMythic
+- ShardMythic
+- DustMythic
+- RunestoneMythic
+
+#Meadows Tier 1
+MeadowsLoot1:
+  - Honey
+  - Feathers
+  - LeatherScraps
+  - DeerHide
+  - DustMagic
+  - ShardMagic
+  - EssenceMagic
+MeadowsLoot2:
+  - Feathers
+  - LeatherScraps
+  - DeerHide
+  - DustMagic
+  - ShardMagic
+  - DustRare
+  - EssenceRare
+  - ShardRare
+MeadowsLoot3:
+  - Coins
+  - FineWood
+  - Copper
+  - CopperOre
+  - DeerHide
+  - Raspberry
+  - TinOre
+  - DustMagic
+  - ShardMagic
+  - DustRare
+  - EssenceRare
+  - DustEpic
+  - EssenceEpic
+
+# Black Forest Tier 2
+BlackforestLoot1:
+  - Amber
+  - Ruby
+  - Coins
+  - BoneFragments
+  - Blueberries
+  - DustRare
+  - EssenceRare
+  - ShardMagic
+  - EssenceMagic
+  - DustMagic
+  - DustEpic
+  - EssenceEpic
+  - RunestoneMagic
+BlackforestLoot2:
+  - CarrotSeeds
+  - AmberPearl
+  - TinOre
+  - CopperOre
+  - DustRare
+  - EssenceRare
+  - ShardMagic
+  - EssenceMagic
+  - DustMagic
+  - DustEpic
+  - EssenceEpic
+  - ShardEpic
+  - RunestoneMagic
+BlackforestLoot3:
+  - Bronze
+  - Copper
+  - AmberPearl
+  - SurtlingCore
+  - DustRare
+  - EssenceRare
+  - RunestoneMagic
+  - DustMagic
+  - DustEpic
+  - EssenceEpic
+  - ShardEpic
+WoodTavernLoot1:
+  - CarrotSeeds
+  - Blueberries
+  - MinceMeatSauce
+  - DeerStew
+  - DustEpic
+  - EssenceEpic
+  - ShardEpic
+  - DustRare
+  - RunestoneMagic
+  - EssenceRare
+
+# Swamp Tier 3
+SwampLoot1:
+  - WitheredBone
+  - SurtlingCore
+  - AmberPearl
+  - Ruby
+  - ElderBark
+  - ArrowPoison
+  - DustEpic
+  - RunestoneRare
+  - DustLegendary
+  - EssenceLegendary
+  - DustRare
+  - EssenceRare
+  - ShardRare
+  - EssenceEpic
+  - ShardEpic
+  - DustEpic
+SwampLoot2:
+  - WitheredBone
+  - SurtlingCore
+  - Chain
+  - TurnipSeeds
+  - Guck
+  - Root
+  - DustRare
+  - RunestoneRare
+  - EssenceRare
+  - ShardRare
+  - EssenceEpic
+  - ShardEpic
+  - DustEpic
+SwampLoot3:
+  - Chain
+  - IronScrap
+  - WitheredBone
+  - DustRare
+  - RunestoneRare
+  - EssenceRare
+  - ShardRare
+  - EssenceEpic
+  - ShardEpic
+  - DustEpic
+  - DustLegendary
+  - EssenceLegendary
+
+# Mountains Tier 4
+MountainsLoot1:
+  - OnionSeeds
+  - SurtlingCore
+  - Bronze
+  - AmberPearl
+  - WolfPelt
+  - Crystal
+  - Tin
+  - ArrowFrost
+  - DustMythic
+  - EssenceLegendary
+  - ShardLegendary
+  - RunestoneEpic
+  - EssenceEpic
+  - ShardEpic
+  - DustEpic
+MountainsLoot2:
+  - OnionSeeds
+  - SurtlingCore
+  - Bronze
+  - AmberPearl
+  - WolfPelt
+  - Crystal
+  - ArrowFrost
+  - DustLegendary
+  - EssenceLegendary
+  - ShardLegendary
+  - RunestoneEpic
+  - EssenceEpic
+  - ShardEpic
+  - DustEpic
+  - DustMythic
+  - EssenceMythic
+  - ShardMythic
+
+# Plains Tier 5
+PlainsLoot1:
+  - BlackMetalScrap
+  - LinenThread
+  - Iron
+  - SurtlingCore
+  - DustMythic
+  - EssenceMythic
+  - ShardMythic
+  - ShardLegendary
+  - RunestoneLegendary
+  - EssenceLegendary
+  - DustLegendary
+PlainsLoot2:
+  - Bread
+  - Iron
+  - Bronze
+  - LoxPie
+  - FishWraps
+  - DustMythic
+  - EssenceMythic
+  - ShardMythic
+  - ShardLegendary
+  - RunestoneLegendary
+  - EssenceLegendary
+  - DustLegendary
+
+# Mistlands Tier 6
+MistLoot1:
+  - WolfMeatSkewer
+  - ScaleHide
+  - Softtissue
+  - JuteBlue
+  - Copper
+  - IronScrap
+  - DustMythic
+  - RunestoneMythic
+  - EssenceMythic
+  - ShardMythic
+  - ShardLegendary
+  - RunestoneLegendary
+  - EssenceLegendary
+  - DustLegendary
+MistLoot2:
+  - RoyalJelly
+  - Mandible
+  - Iron
+  - Bilebag
+  - ScaleHide
+  - WolfMeatSkewer
+  - DustMythic
+  - RunestoneMythic
+  - EssenceMythic
+  - ShardMythic
+  - ShardLegendary
+  - RunestoneLegendary
+  - EssenceLegendary
+  - DustLegendary
