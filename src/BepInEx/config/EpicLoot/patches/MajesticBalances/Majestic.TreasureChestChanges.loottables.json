@@ -1,0 +1,338 @@
+///TreasureChests will no longer drop Enchanted Equipment and only resources///
+{
+  "TargetFile": "loottables.json",
+  "Author": "Majestic",
+  "Priority": 900,
+  "RequireAll": true,
+  "Patches": [
+	{
+      "Path": "$.ItemSets",
+      "Action": "AppendAll",
+      "Value": [	
+			{
+				"Name": "MaterialsTier1",
+				"Loot": [
+					{ "Item": "DustMagic", 					"Weight": 1},
+					{ "Item": "DustRare", 					"Weight": 0.7},
+					{ "Item": "ShardMagic", 				"Weight": 1},
+					{ "Item": "ShardRare", 					"Weight": 0.7},
+					{ "Item": "EssenceMagic", 				"Weight": 1},
+					{ "Item": "EssenceRare", 				"Weight": 0.7}
+				]
+			},
+			{
+				"Name": "MaterialsTier2",
+				"Loot": [
+					{ "Item": "DustMagic", 					"Weight": 0.7},
+					{ "Item": "ShardMagic", 				"Weight": 0.7},
+					{ "Item": "EssenceMagic", 				"Weight": 0.7},
+					{ "Item": "DustRare", 					"Weight": 1},
+					{ "Item": "ShardRare", 					"Weight": 1},
+					{ "Item": "EssenceRare", 				"Weight": 1},
+					{ "Item": "DustEpic", 					"Weight": 0.5},
+					{ "Item": "ShardEpic", 					"Weight": 0.5},
+					{ "Item": "EssenceEpic", 				"Weight": 0.5},
+					{ "Item": "RunestoneMagic", 				"Weight": 0.5}
+				]
+			},
+			{
+				"Name": "MaterialsTier3",
+				"Loot": [
+					{ "Item": "DustRare", 					"Weight": 0.7},
+					{ "Item": "ShardRare", 					"Weight": 0.7},
+					{ "Item": "EssenceRare", 				"Weight": 0.7},
+					{ "Item": "DustEpic", 					"Weight": 1},
+					{ "Item": "ShardEpic", 					"Weight": 1},
+					{ "Item": "EssenceEpic", 				"Weight": 1}, 
+					{ "Item": "DustLegendary", 			"Weight": 0.5},
+					{ "Item": "ShardLegendary", 		"Weight": 0.5},
+					{ "Item": "EssenceLegendary", 	"Weight": 0.5},
+					{ "Item": "RunestoneRare", 			"Weight": 0.5}
+				]
+			},
+			{
+				"Name": "MaterialsTier4",
+				"Loot": [
+					{ "Item": "DustEpic", 					"Weight": 0.7},
+					{ "Item": "ShardEpic", 					"Weight": 0.7},
+					{ "Item": "EssenceEpic", 				"Weight": 0.7},
+					{ "Item": "DustLegendary", 			"Weight": 1},
+					{ "Item": "ShardLegendary", 		"Weight": 1},
+					{ "Item": "EssenceLegendary", 	"Weight": 1},
+					{ "Item": "DustMythic", 				"Weight": 0.5},
+					{ "Item": "ShardMythic", 				"Weight": 0.5},
+					{ "Item": "EssenceMythic", 			"Weight": 0.5},
+					{ "Item": "RunestoneEpic", 			"Weight": 0.5}
+				]
+			},
+			{
+				"Name": "MaterialsTier5",
+				"Loot": [
+					{ "Item": "DustEpic", 					"Weight": 0.5},
+					{ "Item": "ShardEpic", 					"Weight": 0.5},
+					{ "Item": "EssenceEpic", 				"Weight": 0.5},
+					{ "Item": "DustLegendary", 			"Weight": 1},
+					{ "Item": "ShardLegendary", 		"Weight": 1},
+					{ "Item": "EssenceLegendary", 	"Weight": 1},
+					{ "Item": "DustMythic", 				"Weight": 0.7},
+					{ "Item": "ShardMythic", 				"Weight": 0.7},
+					{ "Item": "EssenceMythic", 			"Weight": 0.7},
+					{ "Item": "RunestoneLegendary", "Weight": 0.5}
+				]
+			},
+			{
+				"Name": "MaterialsTier6",
+				"Loot": [
+						{ "Item": "DustEpic", "Weight": 0.5 },
+						{ "Item": "ShardEpic", "Weight": 0.5 },
+						{ "Item": "EssenceEpic", "Weight": 0.5 },
+						{ "Item": "DustLegendary", "Weight": 1.2 },
+						{ "Item": "ShardLegendary", "Weight": 1.2 },
+						{ "Item": "EssenceLegendary", "Weight": 1.2 },
+						{ "Item": "DustMythic", "Weight": 0.8 },
+						{ "Item": "ShardMythic", "Weight": 0.8 },
+						{ "Item": "EssenceMythic", "Weight": 0.8 },
+						{ "Item": "RunestoneLegendary", "Weight": 0.7 },
+						{ "Item": "RunestoneMythic", "Weight": 0.5 }
+				]
+			}
+		]
+	},
+	{
+	  "Path": "$.LootTables[?(@.Object == 'TreasureChest_meadows')].Loot",
+	  "Action": "Overwrite",
+	  "Value": [
+		{ "Item": "MaterialsTier1", "Weight": 1}
+	  ]
+	},
+	{
+	  "Path": "$.LootTables[?(@.Object == 'TreasureChest_blackforest')].Loot",
+	  "Action": "Overwrite",
+	  "Value": [
+		{ "Item": "MaterialsTier2", "Weight": 1}
+	  ]
+	},
+	{
+	  "Path": "$.LootTables[?(@.Object == 'TreasureChest_forestcrypt')].Loot",
+	  "Action": "Overwrite",
+	  "Value": [
+		{ "Item": "MaterialsTier2", "Weight": 1}
+	  ]
+	},
+	{
+	  "Path": "$.LootTables[?(@.Object == 'TreasureChest_fCrypt')].Loot",
+	  "Action": "Overwrite",
+	  "Value": [
+		{ "Item": "MaterialsTier2", "Weight": 1}
+	  ]
+	},
+	{
+	  "Path": "$.LootTables[?(@.Object == 'TreasureChest_trollcave')].Loot",
+	  "Action": "Overwrite",
+	  "Value": [
+		{ "Item": "MaterialsTier2", "Weight": 1},
+		{ "Item": "MaterialsTier3", "Weight": 0.5}
+	  ]
+	},
+	{
+	  "Path": "$.LootTables[?(@.Object == 'shipwreck_karve_chest')].Loot",
+	  "Action": "Overwrite",
+	  "Value": [
+		{ "Item": "MaterialsTier2", "Weight": 1}
+	  ]
+	},
+	{
+	  "Path": "$.LootTables[?(@.Object == 'TreasureChest_meadows_buried')].Loot",
+	  "Action": "Overwrite",
+	  "Value": [
+		{ "Item": "MaterialsTier2", "Weight": 1}
+	  ]
+	},
+	{
+	  "Path": "$.LootTables[?(@.Object == 'TreasureChest_sunkencrypt')].Loot",
+	  "Action": "Overwrite",
+	  "Value": [
+		{ "Item": "MaterialsTier3", "Weight": 1}
+	  ]
+	},
+	{
+	  "Path": "$.LootTables[?(@.Object == 'TreasureChest_swamp')].Loot",
+	  "Action": "Overwrite",
+	  "Value": [
+		{ "Item": "MaterialsTier3", "Weight": 1}
+	  ]
+	},
+	{
+	  "Path": "$.LootTables[?(@.Object == 'TreasureChest_mountains')].Loot",
+	  "Action": "Overwrite",
+	  "Value": [
+		{ "Item": "MaterialsTier4", "Weight": 1}
+	  ]
+	},
+	{
+	  "Path": "$.LootTables[?(@.Object == 'TreasureChest_mountaincave')].Loot",
+	  "Action": "Overwrite",
+	  "Value": [
+		{ "Item": "MaterialsTier4", "Weight": 1},
+		{ "Item": "MaterialsTier5", "Weight": 0.5}
+	  ]
+	},
+	{
+	  "Path": "$.LootTables[?(@.Object == 'TreasureChest_plains_stone')].Loot",
+	  "Action": "Overwrite",
+	  "Value": [
+		{ "Item": "MaterialsTier5", "Weight": 1}
+	  ]
+	},
+	{
+	  "Path": "$.LootTables[?(@.Object == 'TreasureChest_heath')].Loot",
+	  "Action": "Overwrite",
+	  "Value": [
+			{ "Item": "MaterialsTier5", "Weight": 1}
+	  ]
+	},
+	{
+	  "Path": "$.LootTables[?(@.Object == 'TreasureChest_dvergrtown')].Loot",
+	  "Action": "Overwrite",
+	  "Value": [
+			{ "Item": "MaterialsTier6", "Weight": 1}
+	  ]
+	},
+	{
+	  "Path": "$.LootTables[?(@.Object == 'TreasureChest_dvergrtower')].Loot",
+	  "Action": "Overwrite",
+	  "Value": [
+			{ "Item": "MaterialsTier6", "Weight": 1}
+	  ]
+	},
+	{
+	  "Path": "$.LootTables[?(@.Object == 'TreasureChest_dvergr_loose_stone')].Loot",
+	  "Action": "Overwrite",
+	  "Value": [
+			{ "Item": "MaterialsTier6", "Weight": 1}
+	  ]
+	},
+	{
+	  "Path": "$.LootTables[?(@.Object == 'TreasureChest_charredfortress')].Loot",
+	  "Action": "Overwrite",
+	  "Value": [
+			{ "Item": "MaterialsTier6", "Weight": 1}
+	  ]
+	},
+	{
+	  "Path": "$.LootTables[?(@.Object == 'TreasureChest_ashland_stone')].Loot",
+	  "Action": "Overwrite",
+	  "Value": [
+			{ "Item": "MaterialsTier6", "Weight": 1}
+	  ]
+	},
+	
+	{
+	  "Path": "$.LootTables[?(@.Object == 'TreasureMapChest_Meadows')].Loot",
+	  "Action": "AppendAll",
+	  "Value": [
+			{ "Item": "MaterialsTier1", "Weight": 1.3},
+			{ "Item": "MaterialsTier2", "Weight": 2},
+			{ "Item": "RunestoneMagic", "Weight": 0.4},
+			{ "Item": "RunestoneRare", "Weight": 0.3}
+	  ]
+	},
+	{
+      "Path": "$.LootTables[?(@.Object == 'TreasureMapChest_Meadows')].Drops",
+      "Action": "Overwrite",
+      "Value": [ [5, 80], [6, 15], [7, 5] ]
+    },
+	
+	{
+	  "Path": "$.LootTables[?(@.Object == 'TreasureMapChest_BlackForest')].Loot",
+	  "Action": "AppendAll",
+	  "Value": [
+		{ "Item": "MaterialsTier2", "Weight": 1.3},
+		{ "Item": "MaterialsTier3", "Weight": 2},
+		{ "Item": "RunestoneRare", "Weight": 0.7}
+	  ]
+	},
+	{
+		"Path": "$.LootTables[?(@.Object == 'TreasureMapChest_BlackForest')].Drops",
+      "Action": "Overwrite",
+      "Value": [ [5, 80], [6, 15], [7, 5] ]
+    },
+	
+	{
+	  "Path": "$.LootTables[?(@.Object == 'TreasureMapChest_Swamp')].Loot",
+	  "Action": "AppendAll",
+	  "Value": [
+		{ "Item": "MaterialsTier3", "Weight": 1.3},
+		{ "Item": "MaterialsTier4", "Weight": 2},
+		{ "Item": "RunestoneEpic", "Weight": 0.7}
+	  ]
+	},
+	{
+      "Path": "$.LootTables[?(@.Object == 'TreasureMapChest_Swamp')].Drops",
+      "Action": "Overwrite",
+      "Value": [ [5, 80], [6, 15], [7, 5] ]
+    },
+	
+	{
+	  "Path": "$.LootTables[?(@.Object == 'TreasureMapChest_Mountain')].Loot",
+	  "Action": "AppendAll",
+	  "Value": [
+		{ "Item": "MaterialsTier4", "Weight": 1.3},
+		{ "Item": "MaterialsTier5", "Weight": 2},
+		{ "Item": "RunestoneEpic", "Weight": 0.4},
+		{ "Item": "RunestoneLegendary", "Weight": 0.3}
+	  ]
+	},
+	{
+      "Path": "$.LootTables[?(@.Object == 'TreasureMapChest_Mountain')].Drops",
+      "Action": "Overwrite",
+      "Value": [ [5, 80], [6, 15], [7, 5] ]
+    },
+	
+	{
+	  "Path": "$.LootTables[?(@.Object == 'TreasureMapChest_Plains')].Loot",
+	  "Action": "AppendAll",
+	  "Value": [
+		{ "Item": "MaterialsTier5", "Weight": 1.3},
+		{ "Item": "MaterialsTier6", "Weight": 2},
+		{ "Item": "RunestoneLegendary", "Weight": 0.6},
+		{ "Item": "RunestoneMythic", "Weight": 0.1}
+	  ]
+	},
+	{
+      "Path": "$.LootTables[?(@.Object == 'TreasureMapChest_Plains')].Drops",
+      "Action": "Overwrite",
+      "Value": [ [5, 80], [6, 15], [7, 5] ]
+    },
+	
+	{
+	  "Path": "$.LootTables[?(@.Object == 'TreasureMapChest_Mistlands')].Loot",
+	  "Action": "AppendAll",
+	  "Value": [
+		{ "Item": "MaterialsTier5", "Weight": 1.3},
+		{ "Item": "MaterialsTier6", "Weight": 2},
+		{ "Item": "RunestoneLegendary", "Weight": 0.5},
+		{ "Item": "RunestoneMythic", "Weight": 0.2}
+	  ]
+	},
+	{
+      "Path": "$.LootTables[?(@.Object == 'TreasureMapChest_Mistlands')].Drops",
+      "Action": "Overwrite",
+      "Value": [ [5, 80], [6, 15], [7, 5] ]
+    },
+	
+	{
+	  "Path": "$.LootTables[?(@.Object == 'TreasureMapChest_AshLands')].Loot",
+	  "Action": "AppendAll",
+	  "Value": [
+		{ "Item": "MaterialsTier6", "Weight": 3.3},
+		{ "Item": "RunestoneMythic", "Weight": 0.7}
+	  ]
+	},
+	{
+      "Path": "$.LootTables[?(@.Object == 'TreasureMapChest_AshLands')].Drops",
+      "Action": "Overwrite",
+      "Value": [ [5, 80], [6, 15], [7, 5] ]
+    }
+  ]
+}

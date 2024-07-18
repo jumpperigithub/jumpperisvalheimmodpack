@@ -1,0 +1,178 @@
+// Small creatures will now have a chance to drop enchanting mats and rarity is based on stars
+{
+  "TargetFile": "loottables.json",
+  "Author": "Majestic",
+  "RequireAll": true,
+  "Patches": [
+	{
+      "Path": "$.LootTables",
+      "Action": "AppendAll",
+      "Value": [	
+  {
+    "Object": "Greydwarf",
+    "RefObject": "CreatureMats"
+  },
+	{
+      "Object": "Greydwarf_Shaman",
+      "RefObject": "CreatureMats"
+    },
+	{
+      "Object": "Skeleton_Poison",
+      "RefObject": "CreatureMats"
+    },
+	
+	{
+      "Object": "Blob",
+      "RefObject": "CreatureMats"
+    },
+	{
+      "Object": "BlobElite",
+      "RefObject": "CreatureMats"
+    },
+	{
+      "Object": "Draugr",
+      "RefObject": "CreatureMats"
+    },
+	{
+      "Object": "Draugr_Ranged",
+      "RefObject": "CreatureMats"
+    },
+	
+	{
+      "Object": "Leech",
+      "RefObject": "CreatureMats"
+    },
+	{
+      "Object": "Wraith",
+      "RefObject": "CreatureMats"
+    },
+	{
+      "Object": "Surtling",
+      "RefObject": "CreatureMats"
+    },
+	
+	{
+      "Object": "Ulv",
+      "RefObject": "CreatureMats"
+    },
+	{
+      "Object": "Wolf",
+      "RefObject": "CreatureMats"
+    },
+	{
+      "Object": "Hatchling",
+      "RefObject": "CreatureMats"
+    },
+	
+	{
+      "Object": "Deathsquito",
+      "RefObject": "CreatureMats"
+    },
+	{
+      "Object": "Goblin",
+      "RefObject": "CreatureMats"
+    },
+	{
+      "Object": "GoblinArcher",
+      "RefObject": "CreatureMats"
+    },
+	
+	{
+      "Object": "Seeker",
+      "RefObject": "CreatureMats"
+    },
+	{
+      "Object": "Dverger",
+      "RefObject": "CreatureMats"
+    },
+	{
+      "Object": "DvergerMage",
+      "RefObject": "CreatureMats"
+    },
+	{
+      "Object": "Tick",
+      "RefObject": "CreatureMats"
+    },
+	
+	{
+      "Object": "Volture",
+      "RefObject": "CreatureMats"
+    },
+	{
+      "Object": "Asksvin",
+      "RefObject": "CreatureMats"
+    },
+	{
+      "Object": "Charred_Twitcher",
+      "RefObject": "CreatureMats"
+    },
+	{
+      "Object": "Charred_Archer",
+      "RefObject": "CreatureMats"
+    },
+	{
+      "Object": "Charred_Mage",
+      "RefObject": "CreatureMats"
+    },
+	{
+      "Object": "Charred_Melee",
+      "RefObject": "CreatureMats"
+    }
+    ]
+	},
+	
+	{
+      "Path": "$.LootTables",
+      "Action": "AppendAll",
+      "Value": [
+	{
+      "Object": "CreatureMats",
+      "LeveledLoot": [
+        {
+          "Level": 1,
+          "Drops": [ [0, 85], [1, 10], [2, 5], [3, 0] ],
+          "Loot": [
+            { "Item": "Tier0Mats", "Weight": 1 }
+          ]
+        },
+		{
+          "Level": 2,
+          "Drops": [ [0, 85], [1, 10], [2, 5], [3, 0] ],
+          "Loot": [
+            { "Item": "Tier1Mats", "Weight": 1 }
+          ]
+        },
+		{
+          "Level": 3,
+          "Drops": [ [0, 85], [1, 10], [2, 5], [3, 0] ],
+          "Loot": [
+            { "Item": "Tier2Mats", "Weight": 1 }
+          ]
+        },
+		{
+          "Level": 4,
+          "Drops": [ [0, 85], [1, 10], [2, 5], [3, 0] ],
+          "Loot": [
+            { "Item": "Tier2Mats", "Weight": 1 }
+          ]
+        },
+		{
+          "Level": 5,
+          "Drops": [ [0, 85], [1, 10], [2, 5], [3, 0] ],
+          "Loot": [
+            { "Item": "Tier3Mats", "Weight": 1 }
+          ]
+        },
+		{
+          "Level": 6,
+          "Drops": [ [0, 85], [1, 10], [2, 5], [3, 0] ],
+          "Loot": [
+            { "Item": "Tier4Mats", "Weight": 1 }
+          ]
+        }
+       ]
+	  }
+	 ]
+    }
+  ]
+}

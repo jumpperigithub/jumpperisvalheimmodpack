@@ -1,0 +1,1151 @@
+{
+  "TargetFile": "magiceffects.json", 
+  "Author": "Majestic",
+  "RequireAll": true, 
+  "Patches": [
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'ModifyPhysicalDamage')].Requirements.ExclusiveEffectTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "AddBluntDamage",
+          "AddSlashingDamage",
+          "AddPiercingDamage",
+		  "ModifyDamage",
+		  "DoubleMagicShot"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'ModifyPhysicalDamage')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "OneHandedWeapon",
+          "TwoHandedWeapon",
+		  "TwoHandedWeaponLeft",
+          "Bow"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'ModifyElementalDamage')].Requirements.ExclusiveEffectTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "AddFireDamage",
+          "AddFrostDamage",
+          "AddLightningDamage"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'ModifyElementalDamage')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "OneHandedWeapon",
+          "TwoHandedWeapon",
+          "Bow",
+          "Torch"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'ModifyBlockPower')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExcludedItemNames",
+      "Value": [
+          "FishingRod"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'ModifyArmor')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "Helmet",
+          "Chest",
+          "Legs"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'ModifyBackstab')].Requirements.AllowedSkillTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "Knives",
+          "Bows",
+		  "Unarmed"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'ModifyBackstab')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExcludedItemNames",
+      "Value": [
+          "FishingRod"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'IncreaseHealth')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "Chest",
+          "Utility",
+		  "Shoulder"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'IncreaseStamina')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "Legs",
+          "Utility",
+		  "Tools"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'IncreaseStamina')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "AllowedItemNames",
+      "Value": [
+          "FishingRod",
+		  "Hoe",
+		  "Cultivator",
+		  "Hammer"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'IncreaseEitr')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "Utility",
+		  "Helmet",
+          "Staff"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'ModifyHealthRegen')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "Helmet",
+          "Shoulder",
+          "Utility"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'ModifyHealthRegen')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExcludedItemNames",
+      "Value": [
+          "AddHealthRegen"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'ModifyHealthRegen')].SelectionWeight", 
+      "Action": "Overwrite",
+      "Value": 0.5
+    },
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddHealthRegen')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "Helmet",
+          "Shoulder",
+          "Utility"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddHealthRegen')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExclusiveEffectTypes",
+      "Value": [
+          "ModifyHealthRegen"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddHealthRegen')].SelectionWeight", 
+      "Action": "Overwrite",
+      "Value": 0.2
+    },
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'ModifyStaminaRegen')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "Legs",
+          "Utility",
+		  "Tools"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'ModifyStaminaRegen')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "AllowedItemNames",
+      "Value": [
+          "FishingRod",
+		  "Hoe",
+		  "Cultivator",
+		  "Hammer"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'ModifyEitrRegen')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "Shield",
+          "Staff"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddBluntDamage')].Requirements", 
+      "Action": "Overwrite",
+      "Value": {
+          "NoRoll" : true
+	  }
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddSlashingDamage')].Requirements", 
+      "Action": "Overwrite",
+      "Value": {
+          "NoRoll" : true
+	  }
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddPiercingDamage')].Requirements", 
+      "Action": "Overwrite",
+      "Value": {
+          "NoRoll" : true
+	  }
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddFireResistancePercentage')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "Helmet",
+          "Chest",
+          "Legs",
+          "Shoulder"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddFireResistancePercentage')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExclusiveEffectTypes",
+      "Value": [
+          "AddElementalResistancePercentage",
+		  "AddFrostResistancePercentage",
+		  "AddLightningResistancePercentage",
+		  "AddPoisonResistancePercentage",
+		  "AddFireResistancePercentage"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddFrostResistancePercentage')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "Helmet",
+          "Chest",
+          "Legs",
+          "Shoulder"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddFrostResistancePercentage')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExclusiveEffectTypes",
+      "Value": [
+          "AddElementalResistancePercentage",
+		  "AddFrostResistancePercentage",
+		  "AddLightningResistancePercentage",
+		  "AddPoisonResistancePercentage",
+		  "AddFireResistancePercentage"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddLightningResistancePercentage')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "Helmet",
+          "Chest",
+          "Legs",
+          "Shoulder"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddLightningResistancePercentage')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExclusiveEffectTypes",
+      "Value": [
+          "AddElementalResistancePercentage",
+		  "AddFrostResistancePercentage",
+		  "AddLightningResistancePercentage",
+		  "AddPoisonResistancePercentage",
+		  "AddFireResistancePercentage"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddPoisonResistancePercentage')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "Helmet",
+          "Chest",
+          "Legs",
+          "Shoulder"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddPoisonResistancePercentage')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExclusiveEffectTypes",
+      "Value": [
+          "AddElementalResistancePercentage",
+		  "AddFrostResistancePercentage",
+		  "AddLightningResistancePercentage",
+		  "AddPoisonResistancePercentage",
+		  "AddFireResistancePercentage"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddElementalResistancePercentage')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "Helmet",
+          "Chest",
+          "Legs",
+          "Shoulder"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddElementalResistancePercentage')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExclusiveEffectTypes",
+      "Value": [
+          "AddElementalResistancePercentage",
+		  "AddFrostResistancePercentage",
+		  "AddLightningResistancePercentage",
+		  "AddPoisonResistancePercentage",
+		  "AddFireResistancePercentage"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddElementalResistancePercentage')].SelectionWeight", 
+      "Action": "Overwrite",
+      "Value": 0.2
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddBluntResistancePercentage')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExclusiveEffectTypes",
+      "Value": [
+          "AddSlashingResistancePercentage",
+		  "AddPiercingResistancePercentage",
+		  "AddBluntResistancePercentage"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddBluntResistancePercentage')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "Chest",
+		  "Shield"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddBluntResistancePercentage')].SelectionWeight", 
+      "Action": "Overwrite",
+      "Value": 0.2
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddSlashingResistancePercentage')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExclusiveEffectTypes",
+      "Value": [
+          "AddSlashingResistancePercentage",
+		  "AddPiercingResistancePercentage",
+		  "AddBluntResistancePercentage"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddSlashingResistancePercentage')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "Chest",
+		  "Shield"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddSlashingResistancePercentage')].SelectionWeight", 
+      "Action": "Overwrite",
+      "Value": 0.2
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddPiercingResistancePercentage')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExclusiveEffectTypes",
+      "Value": [
+          "AddSlashingResistancePercentage",
+		  "AddPiercingResistancePercentage",
+		  "AddBluntResistancePercentage"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddPiercingResistancePercentage')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "Chest",
+		  "Shield"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddPiercingResistancePercentage')].SelectionWeight", 
+      "Action": "Overwrite",
+      "Value": 0.2
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddPhysicalResistancePercentage')].Requirements", 
+      "Action": "Overwrite",
+      "Value": {
+          "NoRoll" : true
+	  }
+	},
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'ModifyMovementSpeed')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "Legs",
+          "Utility"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'ModifySprintStaminaUse')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "Legs",
+          "Utility"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'ModifyJumpStaminaUse')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "Legs",
+          "Utility"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'ModifyBlockStaminaUse')].Requirements.ExcludedItemNames", 
+      "Action": "Overwrite",
+      "Value": [
+          "FishingRod",
+		  "Hoe",
+		  "Cultivator",
+		  "Hammer"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'Indestructible')].Requirements.AllowedRarities", 
+      "Action": "Overwrite",
+      "Value": [
+          "Legendary",
+          "Mythic"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'Indestructible')].SelectionWeight", 
+      "Action": "Overwrite",
+      "Value": 0.2
+    },
+	
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'Weightless')].Requirements", 
+      "Action": "Overwrite",
+      "Value": {
+          "NoRoll" : true
+	  }
+	},
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddCarryWeight')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "Shoulder",
+          "Utility"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'LifeSteal')].SelectionWeight", 
+      "Action": "Overwrite",
+      "Value": 0.5
+    },
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'LifeSteal')].ValuesPerRarity", 
+      "Action": "Overwrite",
+      "Value": {
+        "Rare"		:	{ "MinValue" : 0.5,    "MaxValue" : 2,   "Increment" : 0.3 },
+        "Epic"		:	{ "MinValue" : 1.5,    "MaxValue" : 3,   "Increment" : 0.3 },
+        "Legendary" :	{ "MinValue" : 2.5,    "MaxValue" : 4,   "Increment" : 0.3 },
+        "Mythic" 	:	{ "MinValue" : 3.5,    "MaxValue" : 6,   "Increment" : 0.3 }
+       }
+    },
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'ModifyAttackSpeed')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "OneHandedWeapon",
+          "TwoHandedWeapon",
+          "TwoHandedWeaponLeft",
+          "Tools",
+		  "Staff"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'ModifyAttackSpeed')].Requirements.ExcludedItemNames", 
+      "Action": "Overwrite",
+      "Value": [
+          "FishingRod",
+		  "Hammer",
+		  "Hoe",
+		  "Cultivator"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'Throwable')].Requirements.ExcludedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "Staff",
+		  "Helmet",
+          "Chest",
+		  "Shield",
+          "Legs",
+          "Shoulder",
+          "Utility"
+        ]
+	},
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'Waterproof')].Requirements", 
+      "Action": "Overwrite",
+      "Value": {
+          "NoRoll" : true
+	  }
+	},
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'DoubleJump')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "Utility",
+		  "Legs"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'DoubleJump')].Requirements.AllowedRarities", 
+      "Action": "Overwrite",
+      "Value": [
+          "Epic",
+          "Legendary",
+          "Mythic"
+        ]
+	},
+	
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'ExplosiveArrows')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExclusiveEffectTypes",
+      "Value": [
+          "TripleBowShot"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'QuickDraw')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExclusiveEffectTypes",
+      "Value": [
+          "TripleBowShot"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddSwordsSkill')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "OneHandedWeapon",
+          "TwoHandedWeapon",
+		  "TwoHandedWeaponLeft"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddSwordsSkill')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExclusiveEffectTypes",
+      "Value": [
+          "QuickLearner"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddSwordsSkill')].SelectionWeight", 
+      "Action": "Overwrite",
+      "Value": 0.5
+    },
+	
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddKnivesSkill')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExclusiveEffectTypes",
+      "Value": [
+          "QuickLearner"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddKnivesSkill')].SelectionWeight", 
+      "Action": "Overwrite",
+      "Value": 0.5
+    },
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddClubsSkill')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExclusiveEffectTypes",
+      "Value": [
+          "QuickLearner"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddClubsSkill')].SelectionWeight", 
+      "Action": "Overwrite",
+      "Value": 0.5
+    },
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddPolearmsSkill')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExclusiveEffectTypes",
+      "Value": [
+          "QuickLearner"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddPolearmsSkill')].SelectionWeight", 
+      "Action": "Overwrite",
+      "Value": 0.5
+    },
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddSpearsSkill')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExclusiveEffectTypes",
+      "Value": [
+          "QuickLearner"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddSpearsSkill')].SelectionWeight", 
+      "Action": "Overwrite",
+      "Value": 0.5
+    },
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddBlockingSkill')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExclusiveEffectTypes",
+      "Value": [
+          "QuickLearner"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddBlockingSkill')].SelectionWeight", 
+      "Action": "Overwrite",
+      "Value": 0.5
+    },
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddAxesSkill')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExclusiveEffectTypes",
+      "Value": [
+          "QuickLearner"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddAxesSkill')].SelectionWeight", 
+      "Action": "Overwrite",
+      "Value": 0.5
+    },
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddBowsSkill')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExclusiveEffectTypes",
+      "Value": [
+          "QuickLearner"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddBowsSkill')].SelectionWeight", 
+      "Action": "Overwrite",
+      "Value": 0.5
+    },
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddCrossbowsSkill')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExclusiveEffectTypes",
+      "Value": [
+          "QuickLearner"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddCrossbowsSkill')].SelectionWeight", 
+      "Action": "Overwrite",
+      "Value": 0.5
+    },
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddBloodMagicSkill')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExclusiveEffectTypes",
+      "Value": [
+          "QuickLearner"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddBloodMagicSkill')].SelectionWeight", 
+      "Action": "Overwrite",
+      "Value": 0.5
+    },
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddElementalMagicSkill')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExclusiveEffectTypes",
+      "Value": [
+          "QuickLearner"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddElementalMagicSkill')].SelectionWeight", 
+      "Action": "Overwrite",
+      "Value": 0.5
+    },
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddPickaxesSkill')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExclusiveEffectTypes",
+      "Value": [
+          "QuickLearner"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddPickaxesSkill')].SelectionWeight", 
+      "Action": "Overwrite",
+      "Value": 0.5
+    },
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddFishingSkill')].SelectionWeight", 
+      "Action": "Overwrite",
+      "Value": 0.5
+    },
+	
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddMovementSkills')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "Legs",
+          "Utility"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddMovementSkills')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExclusiveEffectTypes",
+      "Value": [
+          "QuickLearner"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AddMovementSkills')].SelectionWeight", 
+      "Action": "Overwrite",
+      "Value": 0.5
+    },
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'QuickLearner')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "OneHandedWeapon",
+          "TwoHandedWeapon",
+          "TwoHandedWeaponLeft",
+          "Bow",
+          "Shield",
+		  "Staff",
+		  "Tools"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'QuickLearner')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExclusiveEffectTypes",
+      "Value": [
+          "AddAxesSkill",
+          "AddBlockingSkill",
+          "AddBloodMagicSkill",
+          "AddElementalMagicSkill",
+          "AddBowsSkill",
+          "AddClubsSkill",
+          "AddSpearsSkill",
+          "AddCrossbowsSkill",
+          "AddSwordsSkill",
+		  "AddKnivesSkill",
+		  "AddPolearmsSkill"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'FreeBuild')].Requirements", 
+      "Action": "Overwrite",
+      "Value": {
+          "NoRoll" : true
+	  }
+	},
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'RecallWeapon')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "OneHandedWeapon",
+          "TwoHandedWeapon",
+          "TwoHandedWeaponLeft"
+        ]
+	},
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'ReflectDamage')].ValuesPerRarity", 
+      "Action": "Overwrite",
+      "Value": {
+        "Magic" : 		{ "MinValue" : 2,   "MaxValue" : 4,   "Increment" : 0.5 },
+        "Rare" : 		{ "MinValue" : 3,   "MaxValue" : 6,   "Increment" : 0.5 },
+        "Epic" : 		{ "MinValue" : 4,   "MaxValue" : 8,   "Increment" : 0.5 },
+        "Legendary" :   { "MinValue" : 5,   "MaxValue" : 10,  "Increment" : 0.5 },
+        "Mythic"    : 	{ "MinValue" : 6, 	"MaxValue" : 12,  "Increment" : 0.5 }
+       }
+    },
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AvoidDamageTaken')].ValuesPerRarity", 
+      "Action": "Overwrite",
+      "Value": {
+        "Magic"		:	{ "MinValue" : 5,	"MaxValue" : 6,    "Increment" : 0.5 },
+        "Rare"		:	{ "MinValue" : 5,   "MaxValue" : 9,    "Increment" : 0.5 },
+        "Epic"		:	{ "MinValue" : 5,   "MaxValue" : 12,   "Increment" : 0.5 },
+        "Legendary" :   { "MinValue" : 5,   "MaxValue" : 15,   "Increment" : 0.5 },
+        "Mythic"    : 	{ "MinValue" : 12, 	"MaxValue" : 18,   "Increment" : 0.5 }
+       }
+    },
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'StaggerOnDamageTaken')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExcludedItemNames",
+      "Value": [
+          "FishingRod",
+		  "Hammer",
+		  "Hoe",
+		  "Cultivator"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'ModifyDiscoveryRadius')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "Helmet",
+          "Utility",
+		  "Tools"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'ModifyDiscoveryRadius')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "AllowedItemNames",
+      "Value": [
+          "FishingRod"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'Comfortable')].Requirements", 
+      "Action": "Overwrite",
+      "Value": {
+          "NoRoll" : true
+	  }
+	},
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'Glowing')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "Helmet",
+          "Chest",
+          "Legs",
+          "Shoulder",
+          "Utility",
+		  "Tools"
+        ]
+	},
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'Executioner')].ValuesPerRarity", 
+      "Action": "Overwrite",
+      "Value": {
+        "Epic"      : { "MinValue" : 50,  "MaxValue" : 100, "Increment" : 5 },
+        "Legendary" : { "MinValue" : 100, "MaxValue" : 150, "Increment" : 5 },
+        "Mythic"    : { "MinValue" : 150, "MaxValue" : 200, "Increment" : 5 }
+       }
+    },
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'Executioner')].SelectionWeight", 
+      "Action": "Overwrite",
+      "Value": 0.2
+    },
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'Riches')].ValuesPerRarity", 
+      "Action": "Overwrite",
+      "Value": {
+        "Magic" : 		{ "MinValue" : 1, "MaxValue" : 2, "Increment" : 0.5 },
+        "Rare" : 		{ "MinValue" : 1, "MaxValue" : 3, "Increment" : 0.5 },
+        "Epic" : 		{ "MinValue" : 1, "MaxValue" : 4, "Increment" : 0.5 },
+        "Legendary" : 	{ "MinValue" : 1, "MaxValue" : 5, "Increment" : 0.5 },
+        "Mythic" :		{ "MinValue" : 1, "MaxValue" : 8, "Increment" : 0.5 }
+       }
+    },
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'Riches')].SelectionWeight", 
+      "Action": "Overwrite",
+      "Value": 0.2
+    },
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'Opportunist')].ValuesPerRarity", 
+      "Action": "Overwrite",
+      "Value": {
+        "Rare" : 		{ "MinValue" : 4,   "MaxValue" : 8,   "Increment" : 0.5 },
+        "Epic" : 		{ "MinValue" : 6,   "MaxValue" : 12,  "Increment" : 0.5 },
+        "Legendary" :   { "MinValue" : 8,   "MaxValue" : 16,  "Increment" : 0.5 },
+        "Mythic" :		{ "MinValue" : 10, 	"MaxValue" : 20,  "Increment" : 0.5 }
+       }
+    },
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'Duelist')].Requirements.AllowedSkillTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "Swords",
+		  "Spears",
+		  "Knives",
+		  "Clubs"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'Duelist')].ValuesPerRarity", 
+      "Action": "Overwrite",
+      "Value": {
+        "Magic" : 		{ "MinValue" : 5,    "MaxValue" : 10,  "Increment" : 0.5 },
+        "Rare" : 		{ "MinValue" : 10,   "MaxValue" : 15,  "Increment" : 0.5 },
+        "Epic" : 		{ "MinValue" : 15,   "MaxValue" : 20,  "Increment" : 0.5 },
+        "Legendary" :   { "MinValue" : 20,   "MaxValue" : 25,  "Increment" : 0.5 },
+        "Mythic" :		{ "MinValue" : 25, 	 "MaxValue" : 30,  "Increment" : 0.5 }
+       }
+    },
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'ModifyStaggerDamage')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "OneHandedWeapon",
+          "TwoHandedWeapon",
+          "TwoHandedWeaponLeft",
+          "Bow"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'ModifyStaggerDamage')].ValuesPerRarity", 
+      "Action": "Overwrite",
+      "Value": {
+        "Magic"		:	{ "MinValue" : 5,	"MaxValue" : 6,    "Increment" : 0.5 },
+        "Rare"		:	{ "MinValue" : 5,   "MaxValue" : 9,    "Increment" : 0.5 },
+        "Epic"		:	{ "MinValue" : 5,   "MaxValue" : 12,   "Increment" : 0.5 },
+        "Legendary" :   { "MinValue" : 5,   "MaxValue" : 15,   "Increment" : 0.5 },
+        "Mythic"    : 	{ "MinValue" : 12, 	"MaxValue" : 20,   "Increment" : 0.5 }
+       }
+    },
+	
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'Luck')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+		  "Utility"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'Luck')].ValuesPerRarity", 
+      "Action": "Overwrite",
+      "Value": {
+        "Magic"		:	{ "MinValue" : 1,	"MaxValue" : 4,    "Increment" : 0.5 },
+        "Rare"		:	{ "MinValue" : 4,   "MaxValue" : 8,    "Increment" : 0.5 },
+        "Epic"		:	{ "MinValue" : 6,   "MaxValue" : 12,   "Increment" : 0.5 },
+        "Legendary" :   { "MinValue" : 8,   "MaxValue" : 16,   "Increment" : 0.5 },
+        "Mythic"    : 	{ "MinValue" : 10, 	"MaxValue" : 20,   "Increment" : 0.5 }
+       }
+    },
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'ModifyParryWindow')].ValuesPerRarity", 
+      "Action": "Overwrite",
+      "Value": {
+        "Magic"     : { "MinValue" : 40, "MaxValue" : 60, "Increment" : 1 },
+        "Rare"      : { "MinValue" : 50, "MaxValue" : 70, "Increment" : 1 },
+        "Epic"      : { "MinValue" : 60, "MaxValue" : 80, "Increment" : 1 },
+        "Legendary" : { "MinValue" : 70, "MaxValue" : 90, "Increment" : 1 },
+        "Mythic"    : { "MinValue" : 80, "MaxValue" : 100, "Increment" : 1 }
+       }
+    },
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'Slow')].Requirements.AllowedItemTypes", 
+      "Action": "Overwrite",
+      "Value": [
+          "OneHandedWeapon",
+          "TwoHandedWeapon",
+          "TwoHandedWeaponLeft",
+          "Bow"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'Slow')].ValuesPerRarity", 
+      "Action": "Overwrite",
+      "Value": {
+        "Magic"		:	{ "MinValue" : 5,     "MaxValue" : 10,   "Increment" : 0.5 },
+        "Rare"		:	{ "MinValue" : 10,    "MaxValue" : 20,   "Increment" : 0.5 },
+        "Epic"		:	{ "MinValue" : 15,    "MaxValue" : 30,   "Increment" : 0.5 },
+        "Legendary" :   { "MinValue" : 20,    "MaxValue" : 40,   "Increment" : 0.5 },
+        "Mythic"	:   { "MinValue" : 25,    "MaxValue" : 50,   "Increment" : 0.5 }
+       }
+    },
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'DoubleMagicShot')].Requirements.AllowedRarities", 
+      "Action": "Overwrite",
+      "Value": [
+		  "Legendary",
+          "Mythic"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'DoubleMagicShot')].SelectionWeight", 
+      "Action": "Overwrite",
+      "Value": 0.2
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'DoubleMagicShot')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExclusiveEffectTypes",
+      "Value": [
+          "ModifyDamage",
+		  "ModifyElementalDamage"
+        ]
+	},
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'TripleBowShot')].Requirements", 
+      "Action": "Overwrite",
+      "Value": {
+          "NoRoll" : true
+	  }
+	},
+	
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'ModifyMovementSpeedLowHealth')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExcludedItemNames",
+      "Value": [
+          "FishingRod",
+		  "Hoe",
+		  "Cultivator",
+		  "Hammer"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'ModifyHealthRegenLowHealth')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExcludedItemNames",
+      "Value": [
+          "FishingRod",
+		  "Hoe",
+		  "Cultivator",
+		  "Hammer"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'ModifyBlockPowerLowHealth')].Requirements", 
+      "Action": "Add",
+	  "PropertyName": "ExcludedItemNames",
+      "Value": [
+          "FishingRod",
+		  "Hoe",
+		  "Cultivator",
+		  "Hammer"
+        ]
+	},
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'AvoidDamageTakenLowHealth')].ValuesPerRarity", 
+      "Action": "Overwrite",
+      "Value": {
+        "Magic"		:	{ "MinValue" : 7,	"MaxValue" : 8,    "Increment" : 0.5 },
+        "Rare"		:	{ "MinValue" : 9,   "MaxValue" : 12,   "Increment" : 0.5 },
+        "Epic"		:	{ "MinValue" : 12,   "MaxValue" : 16,   "Increment" : 0.5 },
+        "Legendary" :   { "MinValue" : 14,  "MaxValue" : 20,   "Increment" : 0.5 },
+        "Mythic"    : 	{ "MinValue" : 16, 	"MaxValue" : 24,   "Increment" : 0.5 }
+       }
+    },
+	
+	{
+      "Path": "$.MagicItemEffects[?(@.Type == 'LifeStealLowHealth')].ValuesPerRarity", 
+      "Action": "Overwrite",
+      "Value": {
+        "Magic"		:	{ "MinValue" : 4,	"MaxValue" : 8,    "Increment" : 0.5 },
+        "Rare"		:	{ "MinValue" : 6,   "MaxValue" : 12,   "Increment" : 0.5 },
+        "Epic"		:	{ "MinValue" : 8,   "MaxValue" : 16,   "Increment" : 0.5 },
+        "Legendary" :   { "MinValue" : 10,  "MaxValue" : 20,   "Increment" : 0.5 },
+        "Mythic"    : 	{ "MinValue" : 12, 	"MaxValue" : 24,   "Increment" : 0.5 }
+       }
+    }
+  ]
+}
