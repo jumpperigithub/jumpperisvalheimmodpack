@@ -3,6 +3,9 @@
 > ## NOTE: if you are updating from a previous version, please make sure to delete mods that are listed here as `Remove`.
 > ### If still unsure what to do, you can just make a new profile and reinstall the modpack to update to the latest version.
 
+### 1.2.1
+- Add mod to prevent you and your tames from getting hit by your ballista
+
 ### 1.2.0
 * Added more spells to balance magic
 * Add more endgame content, items, monsters and bosses
