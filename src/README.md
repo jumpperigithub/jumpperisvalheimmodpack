@@ -3,7 +3,7 @@
 > ## UPDATE NOTE: If updating this modpack, check the `changelog` for mods that will need to be removed manually. This does not concern new installations.
 > ### If still unsure what to do, you can just make a new profile and reinstall the modpack to update to the latest version.
 
-Jumpperi's Curated Mods with config changes and balance tweaks. Modpack is based on immersion and exploration while making the base game grind easier, such as woodcutting and mining. The modpack is designed to be played with friends, but it's also enjoyable solo. Modpack is designed not to be too heavy on performance. Not a kitchen sink pack, but a curated selection of mods with config edits that work well together.
+Jumpperi's Curated Mods with config changes and balance tweaks. Modpack is based on immersion and exploration while making the base game grind easier, such as woodcutting and mining. The modpack is designed to be played with friends, but it's also enjoyable solo. Modpack is designed not to be too heavy on performance. Not a kitchen sink pack, but a curated and handpicked selection of mods with handmade config edits that make the mods work well together and give the players a challenging and balanced experience.
 
 ## Modlist
 
