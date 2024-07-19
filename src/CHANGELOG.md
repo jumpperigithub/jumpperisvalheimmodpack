@@ -3,6 +3,10 @@
 > ## NOTE: if you are updating from a previous version, please make sure to delete mods that are listed here as `Remove`.
 > ### If still unsure what to do, you can just make a new profile and reinstall the modpack to update to the latest version.
 
+### 1.2.2
+* **NOTE: <span style="color:red"> Remove</span> `WieldEquipmentWhileSwimming` mod**.
+- HOTFIX: Fix `WieldEquipmentWhileSwimming` and `AzuMiscPatches` compatibility issue by replacing former with `HS EquipInWater`. Bug caused players to be unable to swim with equipment and caused lag.
+
 ### 1.2.1
 - Add mod to prevent you and your tames from getting hit by your ballista
 
@@ -18,7 +22,7 @@
 
 > **How to upgrade your existing world** (Do not do this if you are starting a new world):
 > 1. Backup your world
-> 2. Spawn locations of `More World Locations` to your world, run in chat or console as admin or host:
+> 2. Spawn locations, altars, vegetation and biome changes of `EVA` to your world, run in chat or console as admin or host:
 > `/EVA_upgrade` (It's going to take a while..)
 
 ### 1.1.0

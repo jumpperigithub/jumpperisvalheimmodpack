@@ -1,6 +1,6 @@
 {
   "name": "Jumpperi_Curated_Modpack",
-  "version_number": "1.2.1",
+  "version_number": "1.2.2",
   "website_url": "",
   "description": "NOTE: IF UPDATING, SEE CHANGELOG FOR UPDATE GUIDE! Jumpperi's Curated Mods with handmade config changes and balance tweaks. Modpack is based on immersion and exploration while making the base game grind easier, such as woodcutting and mining.",
   "dependencies": [
@@ -36,7 +36,6 @@
       "GemHunter1-FastTeleport-1.1.0",
       "aedenthorn_mods-InstantMonsterLootDrop-0.5.1",
       "blacks7ar-VikingsDoSwim-1.3.4",
-      "blacks7ar-WieldEquipmentWhileSwimming-1.1.0",
       "MathiasDecrock-Snap_Points_Made_Easy-1.3.3",
       "Searica-AdvancedTerrainModifiers-1.3.3",
       "shudnal-HipLantern-1.0.3",
@@ -115,6 +114,7 @@
       "Azumatt-ResourceUnloadOptimizer-1.0.4",
       "Huntardys-EpicValheimsAdditions-2.1.2",
       "makail-Skyheim-1.3.11",
-      "Azumatt-ImFRIENDLY_DAMMIT-1.1.7"
+      "Azumatt-ImFRIENDLY_DAMMIT-1.1.7",
+      "HS-HS_EquipInWater-1.0.0"
   ]
 }
