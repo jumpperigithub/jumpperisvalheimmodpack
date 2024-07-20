@@ -3,6 +3,19 @@
 > ## NOTE: if you are updating from a previous version, please make sure to delete mods that are listed here as `Remove`.
 > ### If still unsure what to do, you can just make a new profile and reinstall the modpack to update to the latest version.
 
+### 1.3.0
+- **NOTE: <span style="color:red"> Remove</span> `Evasion by Smoothbrain` mod**.
+- **NOTE: <span style="color:red"> Remove</span> `AutoFeed by Narolith` mod**.
+- **NOTE: <span style="color:red"> Remove</span> `Almanac by RustyMods` mod**.
+- **NOTE: <span style="color:red"> Remove</span> `BetterArchery by ishid4` mod**.
+- Greatly improved performance by adding optimization mods and removing few performance heavy mods. Also removed few incompatible mods.
+- Improved archery, stamina usage, melee
+- More weapons, bows, magical weapons. Few OP features disabled.
+
+### 1.2.3
+* **NOTE: <span style="color:red"> Remove</span> `InstantMonsterLootDrop by aedenthorn_mods` mod**.
+* Replaced `InstantMonsterLootDrop by aedenthorn_mods` with `InstantMonsterLootDrop by cjayride` as aeden's mod was causing issues, such as errors on the console, making console unusable.
+
 ### 1.2.2
 * **NOTE: <span style="color:red"> Remove</span> `WieldEquipmentWhileSwimming` mod**.
 - HOTFIX: Fix `WieldEquipmentWhileSwimming` and `AzuMiscPatches` compatibility issue by replacing former with `HS EquipInWater`. Bug caused players to be unable to swim with equipment and caused lag.
