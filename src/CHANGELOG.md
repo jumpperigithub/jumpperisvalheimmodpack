@@ -3,6 +3,9 @@
 > ## NOTE: if you are updating from a previous version, please make sure to delete mods that are listed here as `Remove`.
 > ### If still unsure what to do, you can just make a new profile and reinstall the modpack to update to the latest version.
 
+### 1.3.2
+- Update mod versions
+
 ### 1.3.1
 - **NOTE: <span style="color:red"> Remove</span> `Seasons by Shudnal` mod**.
 - **NOTE: <span style="color:red"> Remove</span> `Spawn_That by ASharpPen` mod**.
