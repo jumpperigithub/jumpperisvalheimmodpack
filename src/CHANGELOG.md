@@ -8,6 +8,7 @@
 - **NOTE: <span style="color:red"> Remove</span> `Spawn_That by ASharpPen` mod**.
 - **NOTE: <span style="color:red"> Remove</span> `Drop_That by ASharpPen` mod**.
 - Had to remove Seasons that caused performance issues, and other unnecessary and possibly performance impacting mods.
+- Few config tweaks and fixes.
 
 ### 1.3.0
 - **NOTE: <span style="color:red"> Remove</span> `Evasion by Smoothbrain` mod**.
